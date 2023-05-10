@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackagram</title>
+    <link rel="stylesheet" href="addfrd/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+      .header {
+        background-color: #87CEFA;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 30%;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        background-color: #FFFFFF;
+      }
+      /* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+    </style>
+    <script>
+      function redirectHome() {
+          window.location = "http://www.example.com/nextpage.html";
+        }
+      function redirectMember(){
+          window.location = "http://127.0.0.1:5500/index.html";
+      }
+    </script>
+  </head>
+  <body>
+    
+    <div class="sidebar">
+      <a href="#" class="logo">
+          <img src="addfrd/img/logo.png" alt="">
+      </a>
+      <div class="profile">
+          <div class="profile-img">
+              <img src="addfrd/img/propic.png" alt="">
+          </div>
+          <div class="name">
+              <h1>Dua Lipa</h1>
+              <img src="addfrd/img/verify.png" alt="">
+          </div>
+          <span>@lipa</span>
+      </div>
+      <div class="about">
+          <div class="box">
+              <h3>54</h3>
+              <span>Posts</span>
+          </div>
+          <div class="box">
+              <h3>14.4k</h3>
+              <span>Followers</span>
+          </div>
+          <div class="box">
+              <h3>14</h3>
+              <span>Following</span>
+          </div>
+      </div>
+      <div class="menu">
+          <a href="#" class="active">
+              <span class="icon">
+                  <i class="ri-function-line"></i>
+              </span>
+              Feed
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-search-line"></i>
+              </span>
+              Explore
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-notification-4-line"></i>
+              </span>
+              Notification
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-mail-line"></i>
+              </span>
+              Messages
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-send-plane-fill"></i>
+              </span>
+              Direct
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-bar-chart-2-line"></i>
+              </span>
+              stats
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-settings-line"></i>
+              </span>
+              settings
+          </a>
+          <a href="#">
+              <span class="icon">
+                  <i class="ri-logout-box-line"></i>
+              </span>
+              logout
+          </a>
+      </div>
+      
+  </div>
+  <div class="main-home">
+      <div class="header">
+          <div class="search">
+              <i class="ri-search-2-line"></i>
+              <input type="text" placeholder="Search">
+          </div>
+          <div class="header-content">
+              <i class="ri-notification-4-line"></i>
+              <i class="ri-mail-line"></i>
+              <a href="#" class="btn">
+                  <i class="ri-add-circle-fill"></i>
+                  <div class="btn-text">Add Photo</div>
+              </a>
+          </div>
+      </div>
+      <div class="feed">
+          <h1>Feed</h1>
+          <div class="feed-text">
+              <h2>Latest</h1>
+              <span>Popular</span>
+          </div>
+      </div>
+      <div class="main-posts">
+        <div class="header">My Members</div>
+        <div class="navbar">
+          <a onclick="redirectHome()">Home</a>
+          <a onclick="redirectMember()">Find member</a>
+          <a href="#">My Progress</a>
+          <a href="#" class="right">Logout</a>
+        </div>
+    
+        <div class="container">
+          <script>
+            const members = [
+              { name: 'Tom', level: 30, Email: 'Tom@gmail.com' , level:1},
+              { name: 'Turtleless', level: 25, Email: 'Turtleless@gmail.com' ,level:2},
+              { name: 'Mario', level: 35, Email: 'Mario@gmail.com' ,level:3},
+            ];
+    
+            function displayMembers() {
+              members.forEach(member => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                  <p>Name: ${member.name}</p>
+                  <p>level: ${member.level}</p>
+                  <p>Email: ${member.Email}</p>
+                `;
+                document.querySelector('.container').appendChild(card);
+              });
+            }
+    
+            displayMembers();
+          </script>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>

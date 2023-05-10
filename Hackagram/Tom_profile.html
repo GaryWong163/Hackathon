@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackagram</title>
+    <link rel="stylesheet" href="addfrd/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <script>
+        function redirectHome() {
+            window.location = "http://www.example.com/nextpage.html";
+          }
+        function redirectMember(){
+            window.location = "http://127.0.0.1:5500/index.html";
+        }
+      </script>
+    </head>
+    <body>
+      
+      <div class="sidebar">
+        <a href="#" class="logo">
+            <img src="addfrd/img/logo.png" alt="">
+        </a>
+        <div class="profile">
+            <div class="profile-img">
+                <img src="addfrd/img/propic.png" alt="">
+            </div>
+            <div class="name">
+                <h1>Dua Lipa</h1>
+                <img src="addfrd/img/verify.png" alt="">
+            </div>
+            <span>@lipa</span>
+        </div>
+        <div class="about">
+            <div class="box">
+                <h3>54</h3>
+                <span>Posts</span>
+            </div>
+            <div class="box">
+                <h3>14.4k</h3>
+                <span>Followers</span>
+            </div>
+            <div class="box">
+                <h3>14</h3>
+                <span>Following</span>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="main.html" class="active">
+                <span class="icon">
+                    <i class="ri-function-line"></i>
+                </span>
+                Hackathon
+            </a>
+            <a href="#">
+                <span class="icon">
+                    <i class="ri-notification-4-line"></i>
+                </span>
+                Notification
+            </a>
+            <a href="index.html">
+                <span class="icon">
+                    <i class="ri-mail-line"></i>
+                </span>
+                Messages
+            </a>
+            <a href="Rankpage.html">
+                <span class="icon">
+                    <i class="ri-bar-chart-2-line"></i>
+                </span>
+                Rank
+            </a>
+            <a href="#">
+                <span class="icon">
+                    <i class="ri-settings-line"></i>
+                </span>
+                settings
+            </a>
+            <a href="login.html">
+                <span class="icon">
+                    <i class="ri-logout-box-line"></i>
+                </span>
+                logout
+            </a>
+        </div>
+        
+    </div>
+    <div class="main-home">
+        <div class="header">
+            <div class="search">
+                <i class="ri-search-2-line"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="header-content">
+                <i class="ri-notification-4-line"></i>
+                <i class="ri-mail-line"></i>
+                <a href="#" class="btn">
+                    <i class="ri-add-circle-fill"></i>
+                    <div class="btn-text">Add Photo</div>
+                </a>
+            </div>
+        </div>
+        <div class="feed">
+            <h1>Profile</h1>
+            <div class="feed-text">
+                <h2>Latest</h1>
+                <span>Popular</span>
+            </div>
+        </div>
+        <div class="main-posts">
+          
+            <html>
+  <head>
+    <title>Tom</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tom</h1>
+    </header>
+    <div id="membersList">
+      <!-- Members information will be displayed here -->
+    </div>
+  </body>
+  <script>
+    // Members data
+    const members = [
+      { name: "Tom", level: 1, city: "Hong Kong", email: 'Tom@gmail.com', photo: "img4.jpg",content:"Is there any one can carry me?" }
+    ];
+
+    // Function to display members information
+    function displayMembers() {
+      let membersListHTML = "";
+      for (let member of members) {
+        membersListHTML += `
+          <div>
+            <img src="${member.photo}" width="100" height="100">
+            <h3>Name: ${member.name}</h3>
+            <p>Level: ${member.level}</p>
+            <p>City: ${member.city}</p>
+            <p>Email:${member.email}</p>
+            <p>Description:${member.content}<p>
+          </div>
+        `;
+      }
+      document.querySelector("#membersList").innerHTML = membersListHTML;
+    }
+
+    // Function to update member photo
+    function updateMemberPhoto(event, memberIndex) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        members[memberIndex].photo = reader.result;
+        displayMembers();
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Call the displayMembers function when the page loads
+    window.onload = function() {
+      displayMembers();
+    };
+  </script>
+</html>
+              </div>
+
+        </div>
+    </div>
+    </body>
+  </html>
