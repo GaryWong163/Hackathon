@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function checkPassword() {
+        var password = document.getElementById("password").value;
+        var passwordCorrect = "secret";
+        if (password === passwordCorrect) {
+          alert("Password is correct");
+        } else {
+          alert("Password is incorrect");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Enter your password:</p>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">Check Password</button>
+  </body>
+</html>
